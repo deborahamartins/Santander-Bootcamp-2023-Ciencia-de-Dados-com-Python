@@ -12,4 +12,13 @@ print('Olá, me chamo {3}. Eu tenho {2} anos de idade, trabalho como {1} e estou
 
 print('Olá, me chamo {nome}. Eu tenho {idade} anos de idade, trabalho como {profissao} e estou matriculado no cruso de {linguagem}' .format(nome = nome, idade = idade, profissao = profissao, linguagem = linguagem))
 
-print('Olá, me chamo {nome}. Eu tenho {idade} anos de idade, trabalho como {profissao} e estou matriculado no cruso de {linguagem}' .format(**pessoa))
+#print('Olá, me chamo {nome}. Eu tenho {idade} anos de idade, trabalho como {profissao} e estou matriculado no cruso de {linguagem}' .format(**pessoa))
+
+# f-string
+print(f'Olá, me chamo {nome}. Eu tenho {idade} anos de idade, trabalho como {profissao} e estou matriculado no curso de {linguagem}.')
+
+# Formatar strings com f-string
+PI = 3.14159
+print(f'Valor de PI: {PI:.2f}')
+# 10 espaços em branco
+print(f'Valor de PI: {PI:10.2f}')
