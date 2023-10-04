@@ -7,7 +7,7 @@ df = pd.read_csv('alunos.csv', names=column_names, header=0)
 
 # Transformação - Calcular a média e a situação do aluno
 df['Média'] = df[['Nota1', 'Nota2', 'Nota3']].mean(axis=1).round(2)
-df['Situação'] = df['Média'].apply(lambda x: 'Aprovado' if x >= 6 else 'Reprovado')
+df['Situação'] = df.apply(lambda row: 'Notas faltantes' if row.isnull().any() else 'Aprovado' if row['Média'] >= 6 else 'Reprovado', axis=1)
 
 # Carregamento - Criar um banco de dados SQLite e carregar os dados
 conn = sqlite3.connect('escola.db')
